@@ -1,0 +1,56 @@
+<?php echo $this->doctype() . "\n"; ?>
+<html lang="pt-BR">
+<head>
+    <?php
+    
+        $this->headLink()->appendStylesheet($this->baseUrl().'/components/metisMenu/dist/metisMenu.min.css');
+        $this->headLink()->appendStylesheet($this->baseUrl().'/components/font-awesome/css/font-awesome.min.css');
+        $this->headLink()->appendStylesheet($this->baseUrl().'/module/admin/css/sb-admin-2.css');
+        
+        $this->headScript()->appendFile($this->baseUrl() .'/components/metisMenu/dist/metisMenu.min.js');
+        $this->headScript()->appendFile($this->baseUrl() .'/module/admin/js/sb-admin-2.js');
+    
+        echo $this->render('_onloadjs.phtml');
+    
+        echo $this->headMeta() . "\n\n";
+        echo $this->headTitle() . "\n\n";
+        echo $this->headLink() . "\n\n";
+        echo $this->headScript() . "\n\n";
+    ?>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        
+        <?php echo $this->render('_header.phtml') ?>
+        
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php echo $this->render('_messages.phtml') ?>
+                        <?php echo $this->layout()->content; ?>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+</body>
+
+</html>

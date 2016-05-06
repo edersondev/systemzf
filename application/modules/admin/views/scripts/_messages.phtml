@@ -1,0 +1,39 @@
+<div id="mensagemAlerta">
+<?php 
+
+$flashMessenger = Zend_Controller_Action_HelperBroker::getStaticHelper('FlashMessenger');
+
+$messageErros = array_merge(
+    $flashMessenger->getMessages('error'),
+    $flashMessenger->getCurrentMessages('error')
+);
+
+$messageSuccess = array_merge(
+    $flashMessenger->getMessages('success'),
+    $flashMessenger->getCurrentMessages('success')
+);
+if ($flashMessenger->hasMessages('error') || $flashMessenger->hasCurrentMessages('error')) :
+?>
+<div id="msgAlert" class="alert alert-danger fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <?php foreach ($messageErros as $message): ?>
+    <p><?php echo $message; ?></p>
+    <?php endforeach; ?>
+</div>
+<?php endif; ?>
+
+<?php if ($flashMessenger->hasMessages('success') || $flashMessenger->hasCurrentMessages('success')) : ?>
+<div id="msgAlert" class="alert alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <?php foreach ($messageSuccess as $message): ?>
+    <p><?php echo $message; ?></p>
+    <?php endforeach; ?>
+</div>
+<?php endif; ?>
+</div>
+
+<?php
+$flashMessenger->clearCurrentMessages('error');
+$flashMessenger->clearCurrentMessages('success');
+$flashMessenger->clearMessages('error');
+$flashMessenger->clearMessages('success');

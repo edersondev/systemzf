@@ -1,0 +1,12 @@
+<?php
+
+$onloadJs = new Zend_Session_Namespace('onloadJs');
+if ( isset($onloadJs->codeJs) && !empty($onloadJs->codeJs) && is_array($onloadJs->codeJs) ){
+    $arrCodeJs = implode(PHP_EOL, $onloadJs->codeJs);
+    $codeJs = <<<JSCODE
+$(document).ready(function() {
+    $arrCodeJs
+});
+JSCODE;
+    $this->headScript()->appendScript($codeJs);
+}

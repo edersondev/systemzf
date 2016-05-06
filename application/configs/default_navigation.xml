@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+   <nav>
+   	<home>
+           <label>Home</label>
+           <controller>index</controller>
+           <action>index</action>
+   	</home>
+        <about>
+            <label>About</label>
+            <controller>index</controller>
+            <action>about</action>
+        </about>
+        <contact>
+            <label>Contact</label>
+            <controller>index</controller>
+            <action>contact</action>
+        </contact>
+        <dropdown>
+            <label>Dropdown</label>
+            <controller>index</controller>
+            <action>dropdown</action>
+            <pages>
+                <actiontst>
+                    <label>Action</label>
+                    <controller>index</controller>
+                    <action>actiontst</action>
+                </actiontst>
+                <another-action>
+                    <label>Another action</label>
+                    <controller>index</controller>
+                    <action>another-action</action>
+                </another-action>
+                <something-else>
+                    <label>Something else here</label>
+                    <controller>index</controller>
+                    <action>something-else-here</action>
+                </something-else>
+                <divisao>
+                    <label>Divisão</label>
+                    <controller>index</controller>
+                    <action>divisao</action>
+                    <class>divider</class>
+                </divisao>
+                <nav-header>
+                    <label>Nav header</label>
+                    <controller>index</controller>
+                    <action>nav-header</action>
+                </nav-header>
+                <separated-link>
+                    <label>Separated link</label>
+                    <controller>index</controller>
+                    <action>separated-link</action>
+                </separated-link>
+                <other-link>
+                    <label>One more separated link</label>
+                    <controller>index</controller>
+                    <action>more-link</action>
+                </other-link>
+            </pages>
+        </dropdown>
+   </nav>
+</configdata>

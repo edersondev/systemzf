@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+   <nav>
+       <dashboard>
+           <label>Dashboard</label> 
+           <controller>index</controller>
+           <action>index</action>
+           <module>admin</module>
+           <icon>fa fa-dashboard fa-fw</icon>
+       </dashboard>
+       <charts>
+           <label>Charts</label>
+           <controller>index</controller>
+           <action>charts</action>
+           <module>admin</module>
+           <icon>fa fa-bar-chart-o fa-fw</icon>
+           <pages>
+               <flot-chart>
+                   <label>Flot Charts</label>
+                   <controller>chart</controller>
+                   <action>flot</action>
+                   <module>admin</module>
+               </flot-chart>
+               <morris-chart>
+                   <label>Morris Chart</label>
+                   <controller>chart</controller>
+                   <action>morris</action>
+                   <module>admin</module>
+               </morris-chart>
+           </pages>
+       </charts>
+       <tables>
+           <label>Tables</label>
+           <controller>table</controller>
+           <action>index</action>
+           <module>admin</module>
+           <icon>fa fa-table fa-fw</icon>
+       </tables>
+       <forms>
+           <label>Forms</label>
+           <controller>form</controller>
+           <action>index</action>
+           <module>admin</module>
+           <icon>fa fa-edit fa-fw</icon>
+       </forms>
+       <ui-elements>
+           <label>UI Elements</label>
+           <controller>ui-element</controller>
+           <action>index</action>
+           <module>admin</module>
+           <icon>fa fa-wrench fa-fw</icon>
+           <pages>
+               <panels-wells>
+                   <label>Panels and Wells</label>
+                   <controller>panel-wells</controller>
+                   <action>index</action>
+                   <module>admin</module>
+               </panels-wells>
+               <buttons>
+                   <label>Buttons</label>
+                   <controller>button</controller>
+                   <action>index</action>
+                   <module>admin</module>
+               </buttons>
+               <notifications>
+                   <label>Notifications</label>
+                   <controller>notification</controller>
+                   <action>index</action>
+                   <module>admin</module>
+               </notifications>
+               <typhography>
+                   <label>Typhography</label>
+                   <controller>typhography</controller>
+                   <action>index</action>
+                   <module>admin</module>
+               </typhography>
+               <icons>
+                   <label>Icons</label>
+                   <controller>icon</controller>
+                   <action>index</action>
+                   <module>admin</module>
+               </icons>
+               <grids>
+                   <label>Grid</label>
+                   <controller>grid</controller>
+                   <action>index</action>
+                   <module>admin</module>
+               </grids>
+           </pages>
+       </ui-elements>
+       <multi-levels>
+           <label>Multi-Level Dropdown</label>
+           <controller>multi-level</controller>
+           <action>index</action>
+           <module>admin</module>
+           <icon>fa fa-sitemap fa-fw</icon>
+           <pages>
+               <item-one>
+                   <label>Second level 1</label>
+                   <controller>multi-level</controller>
+                   <action>item-one</action>
+                   <module>admin</module>
+               </item-one>
+               <item-two>
+                   <label>Second level 2</label>
+                   <controller>multi-level</controller>
+                   <action>item-two</action>
+                   <module>admin</module>
+               </item-two>
+               <item-third>
+                   <label>Third level</label>
+                   <controller>multi-level</controller>
+                   <action>item-third</action>
+                   <module>admin</module>
+                   <pages>
+                       <third-level-one>
+                           <label>Third level 1</label>
+                           <controller>multi-level</controller>
+                           <action>third-level-one</action>
+                           <module>admin</module>
+                       </third-level-one>
+                       <third-level-two>
+                           <label>Third level 2</label>
+                           <controller>multi-level</controller>
+                           <action>third-level-two</action>
+                           <module>admin</module>
+                       </third-level-two>
+                       <third-level-three>
+                           <label>Third level 3</label>
+                           <controller>multi-level</controller>
+                           <action>third-level-three</action>
+                           <module>admin</module>
+                       </third-level-three>
+                   </pages>
+               </item-third>
+           </pages>
+       </multi-levels>
+       <sample-pages>
+           <label>Sample Pages</label>
+           <controller>sample-page</controller>
+           <action>index</action>
+           <module>admin</module>
+           <icon>fa fa-files-o fa-fw</icon>
+           <pages>
+               <blank-page>
+                   <label>Blank Page</label>
+                   <controller>sample-page</controller>
+                   <action>blank-page</action>
+                   <module>admin</module>
+               </blank-page>
+               <login-page>
+                   <label>Login Page</label>
+                   <controller>sample-page</controller>
+                   <action>login</action>
+                   <module>admin</module>
+               </login-page>
+           </pages>
+       </sample-pages>
+   </nav>
+</configdata>

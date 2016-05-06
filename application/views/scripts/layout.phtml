@@ -1,0 +1,36 @@
+<?php echo $this->doctype() . "\n"; ?>
+<html lang="pt-BR">
+    <head>
+    <?php
+        
+        $this->headLink()->appendStylesheet($this->baseUrl().'/module/default/css/bootstrap-theme.min.css');
+        $this->headLink()->appendStylesheet($this->baseUrl().'/module/default/css/ie10-viewport-bug-workaround.css');
+        $this->headLink()->appendStylesheet($this->baseUrl().'/module/default/css/theme.css');
+        
+        echo $this->render('_onloadjs.phtml');
+        
+        echo $this->headMeta() . "\n\n";
+        echo $this->headTitle() . "\n\n";
+        echo $this->headLink() . "\n\n";
+        echo $this->headScript() . "\n\n";
+    ?>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <?php echo $this->render('_header.phtml'); ?>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <?php echo $this->layout()->content; ?>
+    </div> <!-- /container -->
+  
+  </body>
+</html>

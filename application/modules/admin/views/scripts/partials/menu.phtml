@@ -1,0 +1,42 @@
+<ul class="nav" id="side-menu">
+    <?php foreach ( $this->container as $page ) : ?>
+        <li <?php if ( $page->getActive() ) : ?>class="active"<?php endif; ?>>
+            <a href="<?php echo $page->getHref() ?>">
+                <?php if (!is_null($page->get("icon"))): ?>
+                    <i class="<?php echo $page->get("icon"); ?>"></i>
+                <?php endif; ?>
+                <?php echo $page->getLabel(); ?>
+                
+                <?php if ( $page->hasPages() ) : ?>
+                    <span class="fa arrow"></span>
+                <?php endif; ?>
+                
+            </a>
+            <?php if ( $page->hasPages() ) : ?>
+                <ul class="nav nav-second-level collapse">
+                <?php foreach ($page->getPages() as $secondLevel) : ?>
+                    <li <?php if ( $secondLevel->getActive() ) : ?>class="active"<?php endif; ?>>
+                        <a href="<?php echo $secondLevel->getHref(); ?>">
+                            <?php echo $secondLevel->getLabel(); ?>
+                            <?php if ( $secondLevel->hasPages() ) : ?>
+                                <span class="fa arrow"></span>
+                            <?php endif; ?>
+                        </a>
+
+                        <?php if ( $secondLevel->hasPages() ) : ?>
+                            <ul class="nav nav-third-level collapse">
+                                <?php foreach ($secondLevel->getPages() as $thirdLevel) : ?>
+                                    <li <?php if ( $thirdLevel->getActive() ) : ?>class="active"<?php endif; ?>>
+                                        <a href="<?php echo $thirdLevel->getHref(); ?>"><?php echo $thirdLevel->getLabel(); ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
+
+                    </li>
+                <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
