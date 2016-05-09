@@ -1,5 +1,5 @@
 # systemzf
-The beginning of a web system made in zend framework
+The skeleton of a web system made in zend framework
 
 Some features that the system has:
 - Modulated system
